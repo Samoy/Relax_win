@@ -49,7 +49,7 @@ public class MainForm : Form
     private void LoopRun()
     {
         timer.Stop();
-        timer.Interval = 1000 * getSeconds(remainIndex);
+        timer.Interval = 1000 * GetSeconds(remainIndex);
         timer.AutoReset = true;
         timer.Enabled = true;
         timer.Elapsed += new ElapsedEventHandler(ShowNotify);
@@ -60,7 +60,7 @@ public class MainForm : Form
         NotifyIcon.ShowBalloonTip(1000);
     }
 
-    private int getSeconds(int remainIndex)
+    private int GetSeconds(int remainIndex)
     {
         if (remainIndex == 1)
         {
